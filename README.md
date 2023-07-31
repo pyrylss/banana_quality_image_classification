@@ -28,6 +28,7 @@ with zf.ZipFile("Banana_Bad.zip", 'r') as files:
 
 with zf.ZipFile("Banana_Good.zip", 'r') as files:
     files.extractall('Banana_Good')
+```
 
 ## Steps
 
@@ -41,4 +42,41 @@ The project consists of several steps:
 Please refer to the Jupyter notebook BananaQualityClassification.ipynb for detailed code and comments.
 
 ## Prediction
+
+To predict the quality of a new banana image, we defined a function `predict` that loads, preprocesses the image, makes a prediction using the trained model, and interprets the prediction. 
+
+For example:
+
+```python
+from PIL import Image
+import matplotlib.pyplot as plt
+
+def predict(image_path):
+    # Load and preprocess the image
+    image = Image.open(image_path)
+
+    plt.subplot(1, 1, 1)
+    plt.imshow(image)
+    plt.axis('off')
+
+    plt.show()
+
+    image = image.resize((64, 64))  # Resize the image to match the input size
+    image = np.array(image)
+    image = image.flatten() / 255.0  # Flatten and normalize the image
+
+    # Reshape the image to match the input shape expected by the model
+    image = image.reshape(1, -1)
+
+    # Feed the image to the model and obtain the prediction
+    prediction = model.predict(image)
+
+    # Interpret the prediction
+    predicted_class = class_names[prediction[0]]
+    print("Predicted class:", predicted_class)
+
+# Usage
+image_path = "./test.jpeg"
+predict(image_path)
+```
 
