@@ -17,7 +17,8 @@ The project uses the following libraries:
 * zipfile
 
 ### Dataset
-The dataset can be found at https://www.kaggle.com/datasets/shashwatwork/fruitnet-indian-fruits-dataset-with-quality
+Link to dataset: https://www.kaggle.com/datasets/shashwatwork/fruitnet-indian-fruits-dataset-with-quality
+
 The dataset contains images of bananas, classified into two categories: "Banana_Bad" and "Banana_Good". The dataset is provided as zip files and need to be unzipped before usage. Use the following commands to unzip the data:
 
 ```python
