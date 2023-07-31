@@ -3,7 +3,7 @@ Using decision tree for classification of banana images
 
 # Banana Quality Classification
 
-This project aims to classify the quality of bananas using Logistic Regression and Decision Tree. The dataset consists of images of bananas categorized into two classes: "Banana_Bad" and "Banana_Good". The goal is to build and evaluate models to accurately classify the quality of the bananas.
+This project aims to classify the quality of bananas using Logistic Regression and Decision Tree and compares the performance of the models in this specific task. The dataset consists of images of bananas categorized into two classes: "Banana_Bad" and "Banana_Good". The goal is to build and evaluate models to accurately classify the quality of the bananas.
 
 ## Getting Started
 
